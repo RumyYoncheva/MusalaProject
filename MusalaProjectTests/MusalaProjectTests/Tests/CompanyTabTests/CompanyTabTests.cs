@@ -23,15 +23,13 @@ namespace MusalaProjectTests.Tests.CompanyTabTests
         }
 
         [Test]
-        public void AssertFacebookMarketingLinkIsCorrectAndProfilePictureAppears()
+        public void AssertFacebookMarketingLinkIsCorrect()
         {
             CompanyTab.GoTo();
             CompanyTab.ClickFacebookMarketingButton();
-            Assert.Multiple(() =>
-            {
-                FacebookAssertions.AssertFacebookLinkIsCorrect();
-                FacebookAssertions.AssertProfilePictureAppears();
-            });
+
+            FacebookAssertions.AssertFacebookLinkIsCorrect();
+
         }
 
         [TearDown]

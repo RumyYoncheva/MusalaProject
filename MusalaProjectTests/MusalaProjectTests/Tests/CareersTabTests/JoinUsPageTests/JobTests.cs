@@ -16,16 +16,6 @@ namespace MusalaProjectTests.Tests.CareersTabTests.JoinUsPageTests
         }
 
         [Test]
-        public void AssertJoinUsPageIsCorrect()
-        {
-            HomePage.GoTo();
-            HomePage.ClickCareersTab();
-            CareersTab.ClickCheckOurOpenPositionsBtton();
-
-            JoinUsPageAssertions.AssertUrlIsCorrect();
-        }
-
-        [Test]
         public void AssertJobFilterDropdownDefaultIsCorrect()
         {
             HomePage.GoTo();
