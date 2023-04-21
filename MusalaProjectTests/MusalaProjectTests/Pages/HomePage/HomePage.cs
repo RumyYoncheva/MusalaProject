@@ -26,5 +26,10 @@ namespace MusalaProjectTests.Pages.HomePage
         {
             HomePageElements.CompanyTab.Click();
         }
+
+        public static void ClickCareersTab()
+        {
+            HomePageElements.CareersTab.Click();
+        }
     }
 }

@@ -8,5 +8,10 @@ namespace MusalaProjectTests.Pages.CareersTab
         {
             DriverContext.GoTo("http://www.musala.com/careers/");
         }
+        
+        public static void ClickCheckOurOpenPositionsBtton()
+        {
+            CareersTabElements.CheckOurOpenPositionsButton.Click();
+        }
     }
 }
