@@ -13,7 +13,7 @@ namespace MusalaProjectTests.Pages.CareersTab.JobPage.JobFormPopUp
         public static IWebElement YourMessageField => DriverContext.WaitAndFindElement(By.Id("cf-6"));
         public static IWebElement PolicyAcceptCheckbox => DriverContext.WaitAndFindElement(By.Id("adConsentChx"));
         public static IWebElement SendButton => DriverContext.WaitAndFindElement(By.XPath("//*[@id=\"wpcf7-f880-o1\"]/form/div[4]/p/input"));
-
-        //disabled when the form is not correct
+        public static IWebElement EmailValidation => DriverContext.WaitAndFindElement(By.XPath("//*[@id=\"wpcf7-f880-o1\"]/form/p[3]/span/span"));
+        public static IWebElement FileUploadValidation => DriverContext.WaitAndFindElement(By.XPath("//*[@id=\"wpcf7-f880-o1\"]/form/div[2]/p/span[1]/span"));
     }
 }

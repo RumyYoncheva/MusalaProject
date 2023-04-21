@@ -6,10 +6,8 @@ using MusalaProjectTests.Support;
 
 namespace MusalaProjectTests.Tests.CompanyTabTests
 {
-    [TestFixture]
     public class CompanyTabTests
     {
-
         [SetUp]
         public void SetUp()
         {

@@ -8,7 +8,7 @@ namespace MusalaProjectTests.Pages.HomePage.ContactForm
     {
         public static void AssertEmailFieldValidationAppears()
         {
-            WebDriverWait wait = new WebDriverWait(DriverContext.Driver, TimeSpan.FromMilliseconds(100));
+            //WebDriverWait wait = new WebDriverWait(DriverContext.Driver, TimeSpan.FromMilliseconds(100));
             string validationMessageActual = ContactFormElements.FieldValidation.Text;
 
             string expectedValidationMessage = "The e-mail address entered is invalid.";

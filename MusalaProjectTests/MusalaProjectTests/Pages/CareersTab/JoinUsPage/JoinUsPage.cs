@@ -8,5 +8,10 @@ namespace MusalaProjectTests.Pages.CareersTab.JoinUsPage
         {
             DriverContext.GoTo("http://www.musala.com/careers/join-us/");
         }
+
+        public static void SelectFirstOpenPosition()
+        {
+            JoinUsPageElements.JobPosition1.Click();
+        }
     }
 }
