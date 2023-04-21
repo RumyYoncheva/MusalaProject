@@ -7,7 +7,7 @@ namespace MusalaProjectTests.Pages.HomePage
     {
         public static void GoTo()
         {
-            DriverContext.GoTo("http://www.musala.com/");
+            DriverContext.GoTo(DriverContext.GetUrl());
         }
 
         public static void ScrollToContacts()
@@ -20,6 +20,11 @@ namespace MusalaProjectTests.Pages.HomePage
         public static void ClickContactUs()
         {
             HomePageElements.ContactUsButton.Click();
+        }
+
+        public static void ClickCompanyTab()
+        {
+            HomePageElements.CompanyTab.Click();
         }
     }
 }

@@ -32,6 +32,9 @@
     <None Update="config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="CV.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Emails.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

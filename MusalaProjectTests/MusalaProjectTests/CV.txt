@@ -1,0 +1,5 @@
+﻿John Smith
+01.01.2000
+WorkPositions:
+QA
+From 2019   To:2022
