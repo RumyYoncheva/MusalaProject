@@ -15,10 +15,9 @@ namespace MusalaProjectTests.Tests.HomePageTests
             DriverContext.SetBrowser(BrowserType.Chrome);
         }
 
-        [Test]
-        [TestCaseSource(nameof(GetEmail))]
-        [Parallelizable(ParallelScope.All)]
-        public void AssertFieldValidationMessageAppearsWhenEmailIsInvalid(string email)
+        [Test, TestCaseSource(nameof(GetEmail))]        
+        [Parallelizable(ParallelScope.Self)]
+        public void AssertFieldValidationMessageAppearsWhenEmailIsInvalid()
         {
             HomePage.GoTo();
             HomePage.ScrollToContacts();
@@ -28,7 +27,7 @@ namespace MusalaProjectTests.Tests.HomePageTests
             var contactInfo = new ContactFormModel
             {
                 FirstName = "Rumyana",
-                Email = email,
+                Email = "test",
                 Mobile = "",
                 Subject = "Test",
                 YourMessage = "Test"

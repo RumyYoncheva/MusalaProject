@@ -46,13 +46,6 @@ namespace MusalaPorjectTests.Support
 
         public static void GoTo(string url)
         {
-            var config = new ConfigurationBuilder()
-             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("config.json")
-            .Build();
-
-            url = config.GetSection("BaseUrl").Value.ToString();
-
             Driver.Navigate().GoToUrl(url);
         }
 
@@ -61,7 +54,7 @@ namespace MusalaPorjectTests.Support
             Driver.Quit();
         }
 
-        public string GetUrl()
+        public static string GetUrl()
         {
             var config = new ConfigurationBuilder()
              .SetBasePath(Directory.GetCurrentDirectory())
