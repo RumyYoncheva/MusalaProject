@@ -1,4 +1,4 @@
-﻿namespace MusalaProjectTests.Support
+﻿namespace MusalaProjectTests.Models
 {
     public class JobPopUpFormModel
     {

@@ -12,6 +12,7 @@ namespace MusalaProjectTests.Pages.CareersTab.JobPage.JobFormPopUp
 
             validationMessageActual.Should().Be(expectedValidationMessage);
         }
+
         public static void AssertSendButtonIsDisabled()
         {
             JobFormPopUpElements.SendButton.Enabled.Should().BeFalse();

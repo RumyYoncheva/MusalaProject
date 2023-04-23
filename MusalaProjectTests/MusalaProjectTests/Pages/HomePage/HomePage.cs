@@ -1,5 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-using OpenQA.Selenium.Interactions;
+﻿using OpenQA.Selenium.Interactions;
 
 namespace MusalaProjectTests.Pages.HomePage
 {
@@ -7,14 +6,13 @@ namespace MusalaProjectTests.Pages.HomePage
     {
         public static void GoTo()
         {
-            DriverContext.GoTo(DriverContext.GetUrl());
+            DriverContext.GoTo();
         }
 
         public static void ScrollToContacts()
         {
             Actions actions = new Actions(DriverContext.Driver);
-            actions.MoveToElement(HomePageElements.ContactsSection);
-            actions.Perform();
+            actions.MoveToElement(HomePageElements.ContactsSection).Perform();
         }
 
         public static void ClickContactUs()

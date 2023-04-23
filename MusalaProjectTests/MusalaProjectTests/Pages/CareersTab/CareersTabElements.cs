@@ -1,7 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-using OpenQA.Selenium;
-
-namespace MusalaProjectTests.Pages.CareersTab
+﻿namespace MusalaProjectTests.Pages.CareersTab
 {
     public partial class CareersTabElements
     {

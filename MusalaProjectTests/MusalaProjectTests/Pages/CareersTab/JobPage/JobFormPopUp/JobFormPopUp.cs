@@ -1,6 +1,4 @@
-﻿using MusalaProjectTests.Support;
-
-namespace MusalaProjectTests.Pages.CareersTab.JobPage.JobFormPopUp
+﻿namespace MusalaProjectTests.Pages.CareersTab.JobPage.JobFormPopUp
 {
     public static partial class JobFormPopUp
     {

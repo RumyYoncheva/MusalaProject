@@ -1,8 +1,6 @@
-﻿using MusalaProjectTests.Pages.CareersTab.JoinUsPage;
-using MusalaProjectTests.Pages.CareersTab;
+﻿using MusalaProjectTests.Pages.CareersTab;
+using MusalaProjectTests.Pages.CareersTab.JoinUsPage;
 using MusalaProjectTests.Pages.HomePage;
-using MusalaPorjectTests.Support;
-using MusalaProjectTests.Support;
 
 namespace MusalaProjectTests.Tests.CareersTabTests.JoinUsPageTests
 {
@@ -25,17 +23,12 @@ namespace MusalaProjectTests.Tests.CareersTabTests.JoinUsPageTests
 
         [Test]
         [TestCase("Sofia")]
-        //[TestCase("Skopije")]
+        [TestCase("Skopje")]
         public void AssertPositions(string city)
         {
             JoinUsPage.FilterJobPositionByCity(city);
-            JoinUsPage.PrintAllJobsListed(city);
 
-            /*
-            JoinUsPage.FilterJobPositionByCity("Skopje");
-            JoinUsPage.PrintAllJobsListed();
-            */
-
+            JoinUsPageAssertions.AssertJobFilterCityValueIsCorrect(city);
         }
 
         [TearDown]

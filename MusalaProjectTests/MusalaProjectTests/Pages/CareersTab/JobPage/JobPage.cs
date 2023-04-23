@@ -4,7 +4,6 @@
     {
         public static void ClickApplyBtton()
         {
-            JobPageElements.CoockieBarAcceptButton.Click();
             JobPageElements.ApplyButton.Click();
         }
     }

@@ -1,7 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-using OpenQA.Selenium;
-
-namespace MusalaProjectTests.Pages.CareersTab.JobPage
+﻿namespace MusalaProjectTests.Pages.CareersTab.JobPage
 {
     public partial class JobPageElements
     {
@@ -10,6 +7,5 @@ namespace MusalaProjectTests.Pages.CareersTab.JobPage
         public static IWebElement ResponsabilitiesSection => DriverContext.WaitAndFindElement(By.XPath("//*[@id=\"post-5751\"]/div/div[2]/div[1]/div[2]/div[1]/div[2]/h2"));
         public static IWebElement WhatWeOfferSection => DriverContext.WaitAndFindElement(By.XPath("//*[@id=\"post-5751\"]/div/div[2]/div[1]/div[2]/div[2]/div[2]/h2"));
         public static IWebElement ApplyButton => DriverContext.WaitAndFindElement(By.XPath("//*[@id=\"post-5751\"]/div/div[2]/div[2]/a/input"));
-        public static IWebElement CoockieBarAcceptButton => DriverContext.WaitAndFindElement(By.ClassName("cli-bar-btn_container"));
     }
 }

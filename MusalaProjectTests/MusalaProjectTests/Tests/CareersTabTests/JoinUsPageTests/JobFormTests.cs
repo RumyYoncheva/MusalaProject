@@ -1,8 +1,6 @@
-﻿using MusalaPorjectTests.Support;
-using MusalaProjectTests.Pages.CareersTab.JobPage;
+﻿using MusalaProjectTests.Pages.CareersTab.JobPage;
 using MusalaProjectTests.Pages.CareersTab.JobPage.JobFormPopUp;
 using MusalaProjectTests.Pages.CareersTab.JoinUsPage;
-using MusalaProjectTests.Support;
 
 namespace MusalaProjectTests.Tests.CareersTabTests.JoinUsPageTests
 {
@@ -12,6 +10,7 @@ namespace MusalaProjectTests.Tests.CareersTabTests.JoinUsPageTests
         public void SetUp()
         {
             DriverContext.SetBrowser(BrowserType.Chrome);
+
             JoinUsPage.GoTo();
             JoinUsPage.SelectFirstOpenPosition();
             JobPage.ClickApplyBtton();
@@ -20,16 +19,7 @@ namespace MusalaProjectTests.Tests.CareersTabTests.JoinUsPageTests
         [Test]
         public void AssertEmailFieldValidationIsPresent()
         {
-            var candidateInfo = new JobPopUpFormModel()
-            {
-                Name = "Test",
-                Email = "test@test",
-                Mobile = "0891111111",
-                LinkdInProfileLink = "",
-                YourMessage = "test"
-            };
-
-            JobFormPopUp.FillJobForm(candidateInfo);
+            JobFormPopUp.FillJobForm(CandidateInfoFactory.CreateCandidateInfoWithoutLinkdIn());
 
             Assert.Multiple(() =>
             {

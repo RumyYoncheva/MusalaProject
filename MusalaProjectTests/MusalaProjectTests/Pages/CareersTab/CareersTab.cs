@@ -1,6 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-
-namespace MusalaProjectTests.Pages.CareersTab
+﻿namespace MusalaProjectTests.Pages.CareersTab
 {
     public static partial class CareersTab
     {

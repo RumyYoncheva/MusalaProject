@@ -1,9 +1,7 @@
-﻿using MusalaPorjectTests.Support;
-using MusalaProjectTests.Pages.CareersTab;
+﻿using MusalaProjectTests.Pages.CareersTab;
 using MusalaProjectTests.Pages.CareersTab.JobPage;
 using MusalaProjectTests.Pages.CareersTab.JoinUsPage;
 using MusalaProjectTests.Pages.HomePage;
-using MusalaProjectTests.Support;
 
 namespace MusalaProjectTests.Tests.CareersTabTests.JoinUsPageTests
 {
