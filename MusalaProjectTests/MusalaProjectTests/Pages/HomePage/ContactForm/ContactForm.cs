@@ -1,6 +1,4 @@
-﻿using MusalaProjectTests.Models;
-
-namespace MusalaProjectTests.Pages.HomePage.ContactForm
+﻿namespace MusalaProjectTests.Pages.HomePage.ContactForm
 {
     public static partial class ContactForm
     {

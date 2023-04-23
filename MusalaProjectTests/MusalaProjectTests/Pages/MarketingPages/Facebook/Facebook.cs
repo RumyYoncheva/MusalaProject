@@ -1,6 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-
-namespace MusalaProjectTests.Pages.MarketingPages.Facebook
+﻿namespace MusalaProjectTests.Pages.MarketingPages.Facebook
 {
     public static partial class Facebook
     {
@@ -8,6 +6,5 @@ namespace MusalaProjectTests.Pages.MarketingPages.Facebook
         {
             DriverContext.GoTo("https://www.facebook.com/MusalaSoft");
         }
-
     }
 }

@@ -1,7 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-using OpenQA.Selenium;
-
-namespace MusalaProjectTests.Pages.CareersTab.JobPage.JobFormPopUp
+﻿namespace MusalaProjectTests.Pages.CareersTab.JobPage.JobFormPopUp
 {
     public partial class JobFormPopUpElements
     {

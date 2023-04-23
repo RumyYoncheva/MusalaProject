@@ -1,6 +1,4 @@
 ﻿using FluentAssertions;
-using MusalaPorjectTests.Support;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
 namespace MusalaProjectTests.Pages.CareersTab.JoinUsPage
@@ -16,6 +14,12 @@ namespace MusalaProjectTests.Pages.CareersTab.JoinUsPage
         {
             SelectElement dropdownValue = new SelectElement(JoinUsPageElements.JobFilterDropdown);
             dropdownValue.SelectedOption.Text.Should().Be("All Locations");
+        }
+        public static void AssertJobFilterCityValueIsCorrect(string city)
+        {
+            JoinUsPage.PrintAllJobsListed(city);
+            SelectElement dropdownValue = new SelectElement(JoinUsPageElements.JobFilterDropdown);
+            dropdownValue.SelectedOption.Text.Should().Be(city);
         }
     }
 }

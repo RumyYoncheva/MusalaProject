@@ -1,7 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-using OpenQA.Selenium;
-
-namespace MusalaProjectTests.Pages.CompanyTab
+﻿namespace MusalaProjectTests.Pages.CompanyTab
 {
     public static partial class CompanyTabElements
     {
@@ -9,7 +6,6 @@ namespace MusalaProjectTests.Pages.CompanyTab
 
         public static IWebElement FooterSection => DriverContext.WaitAndFindElement(By.ClassName("footer-links"));
 
-        //public static IWebElement FacebokFooterButton => DriverContext.WaitAndFindElement(By.XPath("/html/body/footer/div/div/a[4]/span"));
         public static IWebElement FacebokFooterButton => DriverContext.WaitAndFindElement(By.CssSelector("html > body > footer > div > div > a:nth-of-type(4)"));
 
         public static IWebElement CoockieBarAcceptButton => DriverContext.WaitAndFindElement(By.ClassName("cli-bar-btn_container"));

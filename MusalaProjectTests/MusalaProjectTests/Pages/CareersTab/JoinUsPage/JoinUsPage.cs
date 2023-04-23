@@ -1,6 +1,4 @@
-﻿using MusalaPorjectTests.Support;
-using MusalaProjectTests.Support;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
 namespace MusalaProjectTests.Pages.CareersTab.JoinUsPage
@@ -14,6 +12,10 @@ namespace MusalaProjectTests.Pages.CareersTab.JoinUsPage
 
         public static void SelectFirstOpenPosition()
         {
+            JoinUsPageElements.AcceptCookiesButton.Click();
+            Actions actions = new Actions(DriverContext.Driver);
+            actions.MoveToElement(JoinUsPageElements.JobPosition1);
+            actions.Perform();
             JoinUsPageElements.JobPosition1.Click();
         }
 
@@ -26,30 +28,16 @@ namespace MusalaProjectTests.Pages.CareersTab.JoinUsPage
         public static void PrintAllJobsListed(string city)
         {
             var card = JoinUsPageElements.JobPositons.FindElements(By.ClassName("card-jobsHot__link"));
-            var articleCount = card.Count();
 
             var JobListObjects = new List<JobListModel>();
 
-            for(int i = 0; i < articleCount; i++)
+            for(int i = 0; i < card.Count; i++)
             {
                 var name = card.ElementAt(i).GetAttribute("href").Split("/")[4].Replace("-", " ");
 
-                if (name.Any(char.IsDigit))
-                {
-                    var words = name.Split(" ");
-                    foreach(var word in words)
-                    {
-                        if (word.All(char.IsDigit))
-                        {
-                            break;
-                        }
-                        name = String.Concat(word, " ");
-                    }
-                }
-
                 var job = new JobListModel()
                 {
-                    Name = name,
+                    Name = GetName(card, card.Count),
                     Link = card.ElementAt(i).GetAttribute("href")
                 };
 
@@ -63,6 +51,32 @@ namespace MusalaProjectTests.Pages.CareersTab.JoinUsPage
                 Console.WriteLine($"Position: {job.Name}");
                 Console.WriteLine($"More information: {job.Link}");
             }
+        }
+
+        public static string GetName(IReadOnlyCollection<IWebElement> jobs, int jobCount)
+        {
+            string name = "";
+
+            for (int i = 0; i < jobCount; i++)
+            {
+                name = jobs.ElementAt(i).GetAttribute("href").Split("/")[4].Replace("-", " ");
+
+                if (name.Any(char.IsDigit))
+                {
+                    var words = name.Split(" ");
+                    foreach (var word in words)
+                    {
+                        if (word.All(char.IsDigit))
+                        {
+                            break;
+                        }
+
+                        name = String.Concat(word, " ");
+                    }
+                }
+            }
+
+            return name;
         }
     }
 }

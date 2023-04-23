@@ -1,8 +1,6 @@
-﻿using MusalaPorjectTests.Support;
-using MusalaProjectTests.Pages.CompanyTab;
+﻿using MusalaProjectTests.Pages.CompanyTab;
 using MusalaProjectTests.Pages.HomePage;
 using MusalaProjectTests.Pages.MarketingPages.Facebook;
-using MusalaProjectTests.Support;
 
 namespace MusalaProjectTests.Tests.CompanyTabTests
 {
@@ -19,6 +17,7 @@ namespace MusalaProjectTests.Tests.CompanyTabTests
         {
             HomePage.GoTo();
             HomePage.ClickCompanyTab();
+
             CompanyTabAssertons.AssertLeadershipSectionIsVisible();
         }
 
@@ -29,7 +28,6 @@ namespace MusalaProjectTests.Tests.CompanyTabTests
             CompanyTab.ClickFacebookMarketingButton();
 
             FacebookAssertions.AssertFacebookLinkIsCorrect();
-
         }
 
         [TearDown]
